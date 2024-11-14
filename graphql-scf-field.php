@@ -70,7 +70,7 @@ function gsf_register_scf_field_with_groups() {
                 // Reformat grouped fields to match the desired structure
                 $formatted_fields = [];
                 foreach ($grouped_fields as $group_name => $fields) {
-                    $formatted_fields[] = array_merge($fields, ["@type" => $group_name]);
+                    $formatted_fields[] = array_merge($fields, ["sectionType" => $group_name]);
                 }
 
                 return $formatted_fields;
@@ -111,7 +111,7 @@ function gsf_register_scf_field_with_groups() {
                 // Reformat grouped fields to match the desired structure
                 $formatted_fields = [];
                 foreach ($grouped_fields as $group_name => $fields) {
-                    $formatted_fields[] = array_merge($fields, ["@type" => $group_name]);
+                    $formatted_fields[] = array_merge($fields, ["sectionType" => $group_name]);
                 }
 
                 return $formatted_fields;
