@@ -60,8 +60,26 @@ function gsf_register_scf_field_with_groups() {
                                 $grouped_fields[$group_name] = [];
                             }
 
+                            $value_to_send = $value[0];
+
+                            /** check for image and get the url */
+                            $field_key = get_post_meta($post->ID, '_' . $key, true);
+                            if ($field_key) {
+                                // Get the field data using the field key
+                                $field = acf_get_field($field_key);
+                            
+                                if ($field) {
+                                    if($field['type'] === 'image'){
+                                        $image_data = wp_get_attachment_image_src($value_to_send, 'full');
+                                        if($image_data){
+                                            $value_to_send = $image_data[0];
+                                        }
+                                    }
+                                }
+                            }
+
                             // Add field data to the group object
-                            $grouped_fields[$group_name][$key] = maybe_unserialize($value[0]);
+                            $grouped_fields[$group_name][$key] = maybe_unserialize($value_to_send);
                         }
                         
                     }
@@ -101,8 +119,26 @@ function gsf_register_scf_field_with_groups() {
                                 $grouped_fields[$group_name] = [];
                             }
 
+                            $value_to_send = $value[0];
+
+                            /** check for image and get the url */
+                            $field_key = get_post_meta($post->ID, '_' . $key, true);
+                            if ($field_key) {
+                                // Get the field data using the field key
+                                $field = acf_get_field($field_key);
+                            
+                                if ($field) {
+                                    if($field['type'] === 'image'){
+                                        $image_data = wp_get_attachment_image_src($value_to_send, 'full');
+                                        if($image_data){
+                                            $value_to_send = $image_data[0];
+                                        }
+                                    }
+                                }
+                            }
+
                             // Add field data to the group object
-                            $grouped_fields[$group_name][$key] = maybe_unserialize($value[0]);
+                            $grouped_fields[$group_name][$key] = maybe_unserialize($value_to_send);
                         }
                         
                     }
