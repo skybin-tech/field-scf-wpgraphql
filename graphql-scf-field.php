@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPGraphQL SCF Field
+ * Plugin Name: Field SCF for WPGraphQL
  * Description: Adds a custom field to WPGraphQL to output all custom fields grouped by field group name for posts and pages.
  * Version: 1.0
  * Author: Skybin Technology Private Limited

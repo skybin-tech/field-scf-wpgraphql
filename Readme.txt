@@ -1,4 +1,4 @@
-=== WPGraphQL SCF Field ===
+=== Field SCF for WPGraphQL ===
 Contributors: skybin
 Tags: scf, wpgraphql
 Donate link: https://buymeacoffee.com/anwarjaved
